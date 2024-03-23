@@ -1,98 +1,91 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation boxes</title>
+    <title>2d 3d Animation</title>
 </head>
 <style>
-    * {
+ * {
         box-sizing: border-box;
         margin: 0%;
         padding: 0%;
         scrollbar-width: none;
-
     }
 
-    .parent {
+    .container {
         background-color: rgb(111, 185, 131);
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
+
 
     @keyframes example {
 
-        0% {
-            left: -1000px;
-            transform: rotate(0deg);
-        }
+0% {
+    left: -1000px;
+    transform: rotate(0deg);
+}
 
-        10% {
-            left: 50px;
-            transform: rotate(90deg);
-        }
+10% {
+    left: 50px;
+    transform: rotate(90deg);
+}
 
-        40% {
-            left: 1500px;
-            top: 0px;
-            transform: rotate(90deg);
-        }
+40% {
+    left: 1500px;
+    transform: rotate(90deg);
+}
+ 50% {
+    left: 0px;
+} 
 
-        50% {
-            left: 0px;
-            top: 1000px;
-        }
+100% {
+    background-color: rgb(104, 98, 172);
+}
 
-        100% {
-            top: 10px;
-            background-color: rgb(104, 98, 172);
-        }
-
-    }
+}
 
 
-    @keyframes example2 {
-        0% {
-            transform: rotate(0deg);
-        }
+@keyframes example2 {
+0% {
+    transform: rotate(0deg);
+}
 
-        10% {
-            transform: rotate(90deg);
-        }
+10% {
+    transform: rotate(90deg);
+}
 
-        50% {
-            transform: rotate(90deg);
-        }
+50% {
+    transform: rotate(90deg);
+}
 
-        100% {
-            background-color: rgb(203, 33, 33);
-        }
+100% {
+    background-color: rgb(203, 33, 33);
+}
 
-    }
+}
 
-    @keyframes example3 {
-        0% {
-            transform: rotate(0deg);
-        }
+@keyframes example3 {
+0% {
+    transform: rotate(0deg);
+}
 
-        10% {
-            transform: rotate(90deg);
-        }
+10% {
+    transform: rotate(90deg);
+}
 
-        50% {
-            transform: rotate(90deg);
-        }
+50% {
+    transform: rotate(90deg);
+}
 
-        100% {
-            background-color: rgb(247, 191, 36);
+100% {
+    background-color: rgb(247, 191, 36);
 
-        }
-    }
+}
+}
 
     .box {
             width: 100px;
@@ -103,7 +96,8 @@
             transition: box-shadow 0.3s ease-in-out;
         }
 
-        .red {
+
+    .red {
             background-color: rgb(203, 33, 33);
             padding: 200px;
             animation: example 15s infinite;
@@ -116,10 +110,10 @@
             position: absolute;
             top: 50px;
             right: 50px;
-            animation: example2 15s infinite;
-        }
+           animation: example2 15s infinite;
+            }
 
-        .purple {
+            .purple {
             background-color: rgb(104, 98, 172);
             width: 50px;
             padding: 100px;
@@ -128,22 +122,16 @@
             right: 50px;
             animation: example3 15s infinite;
         }
-
-   
 </style>
-
 <body>
-    <div class="parent">
+     <div class="container">
         <div class="box red">
             <div class="box yellow">
-                <div class="box purple">
+                <div class="box purple ">
 
                 </div>
             </div>
         </div>
     </div>
-</body>
-
-</html>
 </body>
 </html>

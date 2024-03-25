@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation</title>
+   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+   .box{
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+
+   .facebook{
+    border: 2px solid rebeccapurple;
+    color:rebeccapurple ;
+}
+
+.twitter{
+    border: 2px solid #429bf5;
+    color:#429bf5 ;
+}
+
+.linkedIn{
+    border: 2px solid blue;
+    color: blue;
+}
+
+.insta{
+    border: 2px solid #cf4536 ;
+    color: #cf4536;
+}
+   i{
+    padding: 50px 50px 50px;
+   }
+.facebook i:hover{
+    background-color: rebeccapurple;
+    color: white;
+    transform: scale(0.5);
+}
+
+.twitter i:hover{
+    background-color: #429bf5;
+    color: white;
+    transform: scale(0.5);
+
+}
+
+.linkedIn i:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(0.5);
+
+}
+.insta i:hover{
+    background-color: #cf4536;
+    color: white;
+    transform: scale(0.5);
+
+}
+
+
+</style>
+<body bgcolor="black">
+    <div class="container">
+        <div class="box facebook">
+            <i class="fa-brands fa-facebook-f"></i>  
+        </div>
+        <div class="box twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="box linkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <div class="box insta">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+</body>
+</html>

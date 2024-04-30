@@ -1,0 +1,27 @@
+
+
+.nav-item i{
+    color:  palevioletred;
+   }
+
+ .nav-item a{
+   font-weight: 600;
+    color: black;
+ }
+
+ .nav-item a:hover{
+    color: #f5487f;
+ }
+
+ .lead-2 span{
+    color: #f5487f;
+ }
+
+
+ .box{
+    width: 350px;
+    height: 400px;
+    background-color: #8f3b76;
+    padding: 20px;
+  
+ }

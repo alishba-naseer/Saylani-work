@@ -1,14 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 18</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //1. Create an object named car.
-        
-    </script>
-</body>
+      //1. Create an object named car.
+      let car = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2023,
+        color: "Silver",
+        isElectric: false,
+        features: ["Sunroof", "Leather seats", "Navigation system"],
+        start: function () {
+          console.log("Start = Engine started");
+        },
+        stop: function () {
+          console.log("Stop = Engine stopped");
+        },
+      };
+      console.log("Car make from =", car.make);
+      console.log("Year =", car.year);
+      car.start();
+      car.stop();
+      console.log("Car features:", car.features);
+
+      //2. Access the model property of the car object.
+      console.log("Car model =", car.model);
+
+      //3. Modify the year property of the car object.
+      console.log("Before Modification:");
+      console.log("Year =", car.year);
+      console.log("After Modification:");
+      car.year = 2024;
+      console.log("Year =", car.year);
+      //4. Use a loop to print all properties of the car object.
+      for (let key in car) {
+        console.log(key + " : " + car[key]);
+      }
+
+      //5. Create an array of car objects and print the details of each one.
+      let cars = [
+        {
+          make: "Toyota",
+          model: "Camry",
+          year: 2023,
+          color: "silver",
+          isElectric: false,
+          features: ["Sunroof", "Leather seats", "Navigation system"],
+          start: function () {
+            console.log("Engine started");
+          },
+          stop: function () {
+            console.log("Engine stopped");
+          },
+        },
+        {
+          make: "Honda",
+          model: "Civic",
+          year: 2022,
+          color: "Blue",
+          isElectric: false,
+          features: [
+            "Backup camera",
+            "Apple carPlay",
+            "Lane departure warning",
+          ],
+          start: function () {
+            console.log("Engine started");
+          },
+          stop: function () {
+            console.log("Engine stopped");
+          },
+        },
+        {
+          make: "Tesla",
+          model: "Model S",
+          year: 2024,
+          color: "Red",
+          isElectric: true,
+          features: [
+            "Autopilot",
+            "Full self-driving capability",
+            "Premium interior",
+          ],
+          start: function () {
+            console.log("Engine started");
+          },
+          stop: function () {
+            console.log("Engine stopped");
+          },
+        },
+      ];
+      cars.forEach(function (car, index) {
+        console.log(`Car ${index + 1}`);
+        console.log(`Make : ${car.make}`);
+        console.log(`Model: ${car.model}`);
+        console.log(`Year: ${car.year}`);
+        console.log(`Color: ${car.color}`);
+        console.log(`Mileage: ${car.mileage}`);
+        console.log(`Electric: ${car.isElectric ? "Yes" : "No"}`);
+        console.log(`Features: ${car.features.join(", ")}`);
+        console.log("---");
+      });
+
+      //6. Create a person object with a nested address object.
+      class Address {
+        constructor(street, city, state, zipcode) {
+          this.street = street;
+          this.city = city;
+          this.state = state;
+          this.zipcode = zipcode;
+        }
+      }
+      class Person {
+        constructor(name, age, address) {
+          this.name = name;
+          this.age = age;
+          this.address = address;
+        }
+      }
+      let johnsAddress = new Address("123 Main St", "Anytown", "CA", "12345");
+      let john = new Person("John Doe", 30, johnsAddress);
+      console.log("Name =", john.name);
+      console.log("Age =", john.age);
+      console.log("Street =", john.address.street);
+      console.log("City =", john.address.city);
+      console.log("State =", john.address.state);
+      console.log("Zipcode =", john.address.zipcode);
+      console.log(john.address);
+
+      //7. Add a function to the car object to describe it.
+      let Car = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2021,
+        color: "blue",
+        start: function () {
+          console.log("Car started");
+        },
+        drive: function () {
+          console.log("Car is driving");
+        },
+        describe: function () {
+          return `This car is a ${this.color} ${this.year} ${this.make} ${this.model}.`;
+        },
+      };
+
+      console.log(Car.describe());
+      Car.start();
+      Car.drive();
+
+      //8. Write a constructor function to create Person objects.
+      function Per (firstName, lastName, age, gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.describe = function () {
+          return `${this.firstName} ${this.lastName} is ${this.age}-year-old ${this.gender}.`;
+        };
+      }
+      let per1 = new Per("John", "Doe", 30, "male");
+      let per2 = new Per("Jane", "Smith", 25, "female");
+      console.log(per1.describe()); 
+      console.log(per2.describe()); 
+</script>
+  </body>
 </html>

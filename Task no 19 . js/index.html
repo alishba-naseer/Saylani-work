@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Background Color</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .light-bg {
+      background-color: #FFB1B1;
+      color: white;
+    }
+    .dark-bg {
+      background-color: black;
+      color: white;
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 250px;
+    }
+    .toggle-btn {
+      position: relative;
+      width: 220px;
+      height: 120px;
+      background-image:url("Morning.jpg");
+      background-size:cover ;
+      background-repeat: no-repeat;
+      border-radius: 60px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toggle-btn-dark{
+      background-image: url("Night.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .toggle-circle {
+      position: absolute;
+      top: 25px;
+      left: 10px;
+      width: 70px;
+      height: 70px;
+      background-color: #FFCBCB;
+      border-radius: 50%;
+      transition: left 0.3s;
+    }
+    .toggle-circle-dark{
+      background-color: #758694;
+    }
+    .toggle-btn.on .toggle-circle {
+      left: 140px;
+    }
+    #head1{
+      font-size: 50px;
+      margin-right: 20px;
+    }
+    #head2{
+      font-size: 50px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body class="light-bg">
+  <div class="container">
+  <h1 id="head1">AM</h1>
+  <div class="toggle-btn" onclick="toggleBackground()">
+    <div class="toggle-circle"></div>
+  </div>
+  <h1 id="head2">PM</h1>
+</div>
+  <script>
+    function toggleBackground() {
+      const body = document.body;
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const togglecircle = document.querySelector('.toggle-circle');
+      body.classList.toggle('dark-bg');
+      body.classList.toggle('light-bg');
+      toggleBtn.classList.toggle('on');
+      toggleBtn.classList.toggle('toggle-btn-dark');
+      togglecircle.classList.toggle('toggle-circle-dark');
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

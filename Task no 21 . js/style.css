@@ -5,13 +5,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
+    background-color: #4158A6;
 
 }
 
+#start-btn{
+    color: #007bff;
+    cursor: pointer;
+}
+
+
 
 #quiz-container {
-    width: 400px;
+    width: 450px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -87,4 +94,38 @@ body {
     margin-bottom: 20px;
 }
 
+#exit-btn{
+    background-color: #c4180c;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 250px;
+    font-weight: bold;
+}
 
+#continue-btn{
+    background-color: #1ed024;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+
+}
+
+
+#restart-btn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+
+}
+
+li{
+    text-align: left;
+    line-height: 20px;
+}
